@@ -1,0 +1,17 @@
+<img src='foto.jpg'>
+
+<p>hoy te sientes muy <%= session[:insultodeldia] %> </p>
+
+<h1>Nuevo Twit</h1>
+
+<form action='crear_twit' method='post'> 
+	<input type="text" name="message">
+	<input type="submit">
+</form>
+
+<h2>Antiguos Twits</h2>
+<ul>
+	<% session[:twits].each do |twit| %>
+		<li><%= twit %></li>
+	<% end %>
+</ul>

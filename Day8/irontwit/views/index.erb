@@ -1,0 +1,17 @@
+<html>
+  <h1>Twit home page</h1>
+  <p><%= @error %>
+	<h2>Register</h2>
+  <form action="/register" method="POST">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button type="submit" name="action" value="register">register</button>
+  </form>
+<h2>Login</h2>
+<p><%= @errror%>
+  <form action="/login" method="POST">
+    <input type="text" name="username" required>
+    <input type="password" name="password" required>
+    <button type="submit" name="action" value="login">login</button>
+  </form>
+</html>

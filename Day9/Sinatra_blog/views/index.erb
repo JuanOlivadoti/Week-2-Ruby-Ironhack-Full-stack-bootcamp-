@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sinatra blog</title>
+	<link rel="stylesheet" type="text/css" href="./blog.css">
+</head>
+<body>
+
+<header>
+	<span><a href="/">Home</a></span>
+	<span><a href="/newpost">Create a new post</a></span>
+</header>
+
+<section>
+	
+<%@ordered_posts.each_with_index do |post, index|%>
+<a href="/post/<%=index%>"><%= post.title%></a>
+<p><em><%= post.date%></em><p>
+<br>
+<%end%>
+
+</section>
+
+
+
+
+
+</body>
+</html>
